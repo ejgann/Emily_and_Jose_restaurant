@@ -1,0 +1,8 @@
+<h1>Change Customer Info</h1>
+<p>Find me in app/views/customers/edit.html.erb</p>
+
+<%= form_for @customer do |f| %>
+    <%= f.label "Name" %><br>
+    <%= f.text_field :name %><br>
+    <%= f.submit %>
+<% end %>

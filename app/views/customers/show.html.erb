@@ -1,0 +1,13 @@
+<h1>Customers#show</h1>
+
+<h1> <%= @customer.name %> </h1>
+ 
+<%= form_tag customer_path(@customer), method: "delete" do %>
+    <%= submit_tag "Delete this Customer" %>
+<% end %>
+
+<ul>
+<% @customer.foods.each do |food| %>
+<li><%=link_to food.name, food_path(food) %></li>
+<% end %>
+</ul>

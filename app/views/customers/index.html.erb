@@ -1,0 +1,11 @@
+<h1>Customers#index</h1>
+<p>Find me in app/views/customers/index.html.erb</p>
+<p>params.inspect </p>
+<% @customers.each do |customer|%>
+<ul>
+    <li><%= link_to customer.name, customer_path(customer.id) %> </li>
+</ul>
+
+<% end %>
+<%= link_to "Create new Customer", new_customer_path(@customer) %>
+<%# this also works <%= link_to "Create new Customer", new_customer_path %> 

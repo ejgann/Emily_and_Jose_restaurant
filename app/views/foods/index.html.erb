@@ -1,0 +1,10 @@
+<h1>Foods#index</h1>
+
+<p>params.inspect </p>
+<% @foods.each do |food|%>
+<ul>
+    <li><%= link_to food.name, food_path(food.id) %> </li>
+</ul>
+
+<% end %>
+<%= link_to "Create new Food", new_food_path(@food) %>

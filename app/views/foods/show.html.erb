@@ -1,0 +1,8 @@
+<h1>Foods#show</h1>
+
+<h1> <%= @food.name %> </h1>
+<p><%= @food.description %> </p>
+ 
+ <%= form_tag food_path(@food), method: "delete" do %>
+    <%= submit_tag "Delete this Food" %>
+<% end %>
